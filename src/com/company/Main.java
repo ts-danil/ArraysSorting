@@ -10,13 +10,20 @@ import java.util.Scanner;
 
 public class Main {
 
+    public static void main(String[] args) {
+        int[] Array1 = createArray();
+        int[] Array2 = createArray();
+        int[] Array3 = mergeArrays(Array1,Array2);
+        printArray(Array1);
+        printArray(Array2);
+        printArray(Array3);
+    }
+
     public static int[] createArray(){
         Scanner sc = new Scanner(System.in);
-        int n;
-        int[] Arr;
         System.out.println("\n Введите количество элементов в массиве : ");
-        n = sc.nextInt();
-        Arr = new int [n];
+        int n = sc.nextInt();
+        int[] Arr = new int [n];
         System.out.println("Введите элементы: ");
         for ( int i = 0; i < Arr.length; i++){
             Arr[i] = sc.nextInt();
@@ -57,14 +64,4 @@ public class Main {
         return Arr;
     }
 
-
-    public static void main(String[] args) {
-        int[] Array1, Array2, Array3;
-        Array1 = createArray();
-        Array2 = createArray();
-        Array3 = mergeArrays(Array1,Array2);
-        printArray(Array1);
-        printArray(Array2);
-        printArray(Array3);
-    }
 }
